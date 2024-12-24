@@ -37,6 +37,7 @@ e.addEventListener('click',()=>{
     else {
     error.classList.remove("error-label")
     }
+    
     localStorage.setItem('myGoals',JSON.stringify(allGoals))
     goalCnt=Object.values(allGoals).filter((goal)=>goal.completed).length
     progressBar.style.width=`${(goalCnt/cnt)*100}%`
@@ -51,7 +52,9 @@ e.addEventListener('click',()=>{
         (progressLabel).firstElementChild.innerText="Whoaa!!! you just completed all the goals. time to chill !!"
     }
 })
+    
 })
+
 inputList.forEach((e)=>{
     e.addEventListener('focus',()=>{
         error.classList.add("error-label")
@@ -70,6 +73,7 @@ inputList.forEach((e)=>{
     localStorage.setItem('myGoals',JSON.stringify(allGoals))
     })
 })
+
 inputList.forEach((e)=>{
 if(allGoals[e.id])
 e.value=allGoals[e.id].name
@@ -82,4 +86,5 @@ else{
 if(allGoals[e.id].completed){
     e.parentElement.classList.add('completed') 
 }
+    
 })
