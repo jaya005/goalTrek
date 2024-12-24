@@ -154,7 +154,3 @@ display: block;
 .error-label{
     display: none;
 }
-/* .error-label .required-item{
-    display: block;
-} */
- /* remove  error label class to show error */
